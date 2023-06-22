@@ -1,0 +1,46 @@
+Q1:Write a Program (WAP) to display a 2 - dimensial array where read no. of the
+rows ,columns and array value from the keyboard as shown below
+
+----- CODE -------
+
+using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
+
+namespace ‬LAB-4
+{
+    internal class Program
+    {
+            public static void Main(string[] args)
+            {
+                Console.WriteLine("Enter number of rows");
+                int rows = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter number of columns");
+                int columns = Convert.ToInt32(Console.ReadLine());
+
+                int[,] arr = new int[rows, columns];
+                //entering the elements in array
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        Console.WriteLine("Enter the element for position {0},{1}",i,j);
+                        arr[i, j] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    
+                }
+                // extracting elements
+                Console.WriteLine("----------- Elements ---------");
+                for (int i = 0; i < rows; i++)
+                {
+                    for(int j = 0; j < columns; j++)
+                    {
+                        Console.Write("\t"+arr[i, j]);
+                    }
+                    Console.WriteLine();
+                }
+            }
+            //main function end
+        }
+    }
+
