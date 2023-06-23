@@ -1,0 +1,48 @@
+Q:Dynamic 2D array
+
+--- CODE ---
+
+using System;
+namespace MethodsFirstProg
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            //user input for rows
+            Console.WriteLine("Enter number of rows");
+            int rows = Convert.ToInt32(Console.ReadLine());
+            //user input for column
+            Console.WriteLine("Enter number of Columns");
+            int columns = Convert.ToInt32(Console.ReadLine());
+
+            int[,] arr = new int[rows, columns];
+           
+            
+            //input elements
+            for(int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.WriteLine("Enter element for {0},{1}", i, j);
+                    int element = Convert.ToInt32(Console.ReadLine());
+                    arr[i,j] = element;           
+                }
+            }
+
+            //printing elements
+            Console.WriteLine("-----Array-----");
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    Console.Write("\t" + arr[i,j]);
+                   
+                }
+                Console.WriteLine();
+            }
+        }
+        //main function end
+    }
+}
+
