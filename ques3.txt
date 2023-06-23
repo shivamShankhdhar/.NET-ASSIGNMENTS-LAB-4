@@ -1,0 +1,41 @@
+
+Q3: Write a program in C# to read n number of values in an array and display it in
+reverse order
+
+--- CODE ---
+
+using MethodsFirstProg;
+using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
+
+namespace MethodsFirstProg
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Enter size of the array");
+            int size = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[size];
+            
+            //input elements
+            for(int i = 0; i < size; i++)
+            {
+                Console.WriteLine("Enter value for {0} index", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            //extracting elements
+            Console.WriteLine("----- Array Elements in reverse order -----");
+            for(int i = size - 1; i >= 0; i--)
+            {
+                Console.Write("\t" + arr[i]);
+            }
+        }
+        //main function end
+    }
+}
+
+
+//Q3: Write a program in C# to read n number of values in an array and display it in
+//reverse order
