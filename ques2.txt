@@ -1,6 +1,5 @@
 
-Q3: Write a program in C# to read n number of values in an array and display it in
-reverse order
+Q2:WAP To create following Jagged array:
 
 
 ---- CODE ----
