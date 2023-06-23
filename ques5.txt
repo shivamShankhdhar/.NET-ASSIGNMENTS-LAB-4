@@ -1,0 +1,46 @@
+using MethodsFirstProg;
+using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
+
+namespace MethodsFirstProg
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            int sum         = 0;
+            Console.WriteLine("Enter size of the array");
+            int size        = Convert.ToInt32(Console.ReadLine());
+            int[] arr       = new int[size];
+            int[] arrCopy   = new int[size];
+            
+            //input elements
+            for(int i = 0; i < size; i++)
+            {
+                Console.WriteLine("Enter value for {0} index", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            // Copying Array
+            for(int i = size - 1; i >= 0; i--)
+            {
+                arrCopy[i] = arr[i];
+            }
+            Console.WriteLine("----- Original Array -----");
+            for(int i =0;i<size; i++)
+            {
+                Console.Write("\t" + arr[i]);
+            }
+            Console.WriteLine();
+            Console.WriteLine("----- Copied Array -----");
+            for (int i = 0; i < size; i++)
+            {
+                Console.Write("\t" + arrCopy[i]);
+            }
+        }
+        //main function end
+    }
+}
+
+
+//Q 5: Write a program in C# to copy the elements of one array into another array.
